@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mussoorie Squad Trip — April 25–29, 2026. Interactive itinerary, food guide, places, and directions." />
+  <title>Mussoorie Trip 🏔️ | Apr 25–29, 2026</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  NAVIGATION
+     ╚══════════════════════════════════════════╝ -->
+<nav id="navbar">
+  <a class="nav-brand" href="#hero">
+    🏔️ <span>Mussoorie</span> '26
+  </a>
+
+  <ul class="nav-links">
+    <li><a class="nav-link" href="#itinerary">Itinerary</a></li>
+    <li><a class="nav-link" href="#places">Places</a></li>
+    <li><a class="nav-link" href="#food">Food</a></li>
+    <li><a class="nav-link" href="#stays">Stays</a></li>
+    <li><a class="nav-link" href="#packing">Pack</a></li>
+    <li><a class="nav-link" href="#tips">Tips</a></li>
+  </ul>
+
+  <button id="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+</nav>
+
+<!-- Mobile menu -->
+<nav id="mobile-menu">
+  <a class="nav-link" href="#itinerary">📅 Itinerary</a>
+  <a class="nav-link" href="#places">📍 Places</a>
+  <a class="nav-link" href="#food">🍽️ Food Guide</a>
+  <a class="nav-link" href="#stays">🏡 Stays</a>
+  <a class="nav-link" href="#packing">🎒 Packing</a>
+  <a class="nav-link" href="#tips">💡 Tips</a>
+</nav>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  HERO
+     ╚══════════════════════════════════════════╝ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+
+  <div class="hero-content">
+    <div class="hero-badge">🏔️ Squad Trip · April 2026</div>
+
+    <h1 class="hero-h1">Musso<em>orie</em></h1>
+    <p class="hero-sub">Queen of the Hills &nbsp;·&nbsp; 5 Days · 4 Nights &nbsp;·&nbsp; Uttarakhand</p>
+
+    <div class="hero-pills">
+      <span class="hero-pill">📅 Apr 25 – 29</span>
+      <span class="hero-pill">🎒 Hostel → Private BnB</span>
+      <span class="hero-pill">🌄 ~2200m Altitude</span>
+      <span class="hero-pill">👥 The Full Squad</span>
+      <span class="hero-pill">🌡️ 10–22°C</span>
+    </div>
+
+    <!-- Countdown -->
+    <p id="cd-banner">Trip starts in...</p>
+    <div class="countdown">
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-days">--</span>
+        <span class="cd-label">Days</span>
+      </div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-hours">--</span>
+        <span class="cd-label">Hours</span>
+      </div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-mins">--</span>
+        <span class="cd-label">Mins</span>
+      </div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-secs">--</span>
+        <span class="cd-label">Secs</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mountain silhouette SVG -->
+  <svg class="hero-mountains" viewBox="0 0 1440 280" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,280 L0,180 L100,100 L200,160 L320,70 L420,130 L540,50 L640,120 L760,30 L860,110 L980,55 L1080,130 L1200,65 L1320,140 L1440,80 L1440,280Z" fill="rgba(0,0,0,0.28)" />
+    <path d="M0,280 L0,220 L80,160 L180,200 L300,130 L420,195 L540,115 L660,185 L780,100 L900,175 L1020,110 L1140,185 L1260,130 L1440,195 L1440,280Z" fill="rgba(0,0,0,0.2)" />
+    <path d="M0,280 L0,240 L150,195 L300,255 L450,180 L600,250 L750,170 L900,245 L1050,185 L1200,250 L1350,195 L1440,250 L1440,280Z" fill="rgba(244,239,233,1)" />
+  </svg>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  ITINERARY
+     ╚══════════════════════════════════════════╝ -->
+<section id="itinerary" class="dark-section">
+  <div class="section">
+    <p class="section-label">Day by Day</p>
+    <h2 class="section-title">Full Itinerary</h2>
+    <p class="section-sub">Every day planned with timings, durations, and directions baked in. Click a day to see the breakdown.</p>
+
+    <div id="day-tabs"></div>
+    <div id="day-panels"></div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  PLACES TO SEE
+     ╚══════════════════════════════════════════╝ -->
+<section id="places">
+  <div class="section">
+    <p class="section-label">Where To Go</p>
+    <h2 class="section-title">Places to See</h2>
+    <p class="section-sub">Every major spot on this trip — with images, tips, timings, and one-tap directions.</p>
+
+    <div id="places-grid"></div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  FOOD GUIDE
+     ╚══════════════════════════════════════════╝ -->
+<section id="food" class="dark-section">
+  <div class="section">
+    <p class="section-label">Where to Eat</p>
+    <h2 class="section-title">Local Food Guide</h2>
+    <p class="section-sub">Locally recommended eats, sorted by area. Every card includes timings, what to order, price level, and directions.</p>
+
+    <div class="filter-bar" id="food-filters"></div>
+    <div id="food-grid"></div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  STAYS
+     ╚══════════════════════════════════════════╝ -->
+<section id="stays">
+  <div class="section">
+    <p class="section-label">Where We're Sleeping</p>
+    <h2 class="section-title">Our Stays</h2>
+    <p class="section-sub">Two properties, two vibes — starting hostel, ending in a private BnB upgrade.</p>
+
+    <div class="stays-grid">
+
+      <div class="stay-card reveal" style="--i:0">
+        <div class="stay-nights">🌙 Night 1 & 2 · Apr 25–26</div>
+        <h3 class="stay-name">Shalom Backpackers</h3>
+        <p class="stay-type">Budget Hostel · Mall Road Area</p>
+        <div class="stay-info">
+          <span>📍 Near Mall Road, Mussoorie</span>
+          <span>🛏️ Dorm-style beds</span>
+          <span>⏰ Check-in from 7:00 PM (Day 1)</span>
+          <span>📤 Check-out by 10:00 AM (Day 3)</span>
+          <span>💡 Great location — walking distance to everything</span>
+        </div>
+        <a class="btn-maps" href="https://www.google.com/maps/search/?api=1&query=Shalom+Backpackers+Mussoorie" target="_blank" rel="noopener">
+          📍 Find on Maps
+        </a>
+      </div>
+
+      <div class="stay-card reveal" style="--i:1">
+        <div class="stay-nights">🌙 Night 3 & 4 · Apr 27–28</div>
+        <h3 class="stay-name">Private BnB 🏡</h3>
+        <p class="stay-type">Private Property · TBD Location</p>
+        <div class="stay-info">
+          <span>📍 Location to be confirmed</span>
+          <span>🛏️ Private rooms for the group</span>
+          <span>⏰ Check-in from 10:30 AM (Day 3)</span>
+          <span>📤 Check-out by 10:00 AM (Day 5)</span>
+          <span>💡 Major upgrade from the hostel — own space, own kitchen</span>
+        </div>
+        <a class="btn-maps" href="https://www.google.com/maps/search/?api=1&query=BnB+Mussoorie" target="_blank" rel="noopener">
+          📍 Explore Options
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  WEATHER STRIP
+     ╚══════════════════════════════════════════╝ -->
+<section id="weather" class="dark-section">
+  <div class="section" style="padding-top:3rem;padding-bottom:3rem;">
+    <p class="section-label">Expected Weather</p>
+    <h2 class="section-title">Mussoorie in April</h2>
+    <div id="weather-card"></div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  PACKING LIST
+     ╚══════════════════════════════════════════╝ -->
+<section id="packing">
+  <div class="section">
+    <p class="section-label">Don't Forget</p>
+    <h2 class="section-title">Packing Checklist</h2>
+    <p class="section-sub">Check off items as you pack. Progress tracked below.</p>
+
+    <div class="pack-progress-label">
+      <span>Items packed</span>
+      <span><span id="pack-count">0</span> / <span id="pack-total">—</span></span>
+    </div>
+    <div class="pack-progress-wrap">
+      <div id="pack-progress-fill"></div>
+    </div>
+
+    <div id="packing-list"></div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  QUICK TIPS
+     ╚══════════════════════════════════════════╝ -->
+<section id="tips" class="dark-section">
+  <div class="section">
+    <p class="section-label">Good to Know</p>
+    <h2 class="section-title">Quick Tips</h2>
+    <p class="section-sub">Small things that make a big difference on a hill trip.</p>
+
+    <div class="tips-grid">
+      <div class="tip-card reveal" style="--i:0">
+        <h4>🚗 Getting There</h4>
+        <ul>
+          <li>Arrive at Dehradun by 5 PM on April 25</li>
+          <li>Cab from Dehradun takes ~1.5 hrs to Mussoorie</li>
+          <li>Fixed price cabs: ~₹600–800 from Dehradun station</li>
+          <li>Avoid arriving on a weekend — roads can be jammed</li>
+        </ul>
+      </div>
+      <div class="tip-card reveal" style="--i:1">
+        <h4>💵 Money</h4>
+        <ul>
+          <li>Carry ₹3000+ cash — many spots don't take UPI</li>
+          <li>ATMs on Mall Road (check before going to viewpoints)</li>
+          <li>Bargain at souvenir shops — opening price is 2x</li>
+          <li>Food is cheap; transport adds up fast</li>
+        </ul>
+      </div>
+      <div class="tip-card reveal" style="--i:2">
+        <h4>🏔️ Altitude & Health</h4>
+        <ul>
+          <li>Mussoorie is ~2200m — take it easy on Day 1</li>
+          <li>Drink more water than you think you need</li>
+          <li>Headaches are common on Day 1, usually fine by Day 2</li>
+          <li>Carry Dolo/Paracetamol just in case</li>
+        </ul>
+      </div>
+      <div class="tip-card reveal" style="--i:3">
+        <h4>📱 Connectivity</h4>
+          <ul>
+          <li>Jio & Airtel have decent coverage on Mall Road</li>
+          <li>Signal drops near viewpoints — download offline maps</li>
+          <li>Download Google Maps for Mussoorie offline before leaving</li>
+          <li>Share your location with someone back home</li>
+        </ul>
+      </div>
+      <div class="tip-card reveal" style="--i:4">
+        <h4>🌦️ Weather Tips</h4>
+        <ul>
+          <li>April mornings can be crisp — always carry a jacket</li>
+          <li>Afternoons are warm; evenings cool down fast</li>
+          <li>Light rain is possible — a windcheater doubles as rain cover</li>
+          <li>Best trekking: morning hours before noon</li>
+        </ul>
+      </div>
+      <div class="tip-card reveal" style="--i:5">
+        <h4>🎒 Trek Days</h4>
+        <ul>
+          <li>George Everest: wear proper closed shoes, last 15 min steep</li>
+          <li>Carry 1L water per person minimum</li>
+          <li>Start by 9 AM — afternoon mist can reduce views</li>
+          <li>Stock up on Prakash Store snacks before heading out</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  FOOTER
+     ╚══════════════════════════════════════════╝ -->
+<footer>
+  <div class="footer-brand">Musso<span>orie</span> '26</div>
+  <p>April 25 – 29 &nbsp;·&nbsp; The Squad &nbsp;·&nbsp; Uttarakhand 🏔️</p>
+  <p style="margin-top:1rem; font-size:0.75rem;">
+    Directions powered by <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a>
+    &nbsp;·&nbsp; Photos via <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>
+  </p>
+  <p style="margin-top:0.5rem; font-size:0.72rem; opacity:.5;">See you in the clouds ☁️</p>
+</footer>
+
+<!-- Scripts (data must load before app) -->
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
